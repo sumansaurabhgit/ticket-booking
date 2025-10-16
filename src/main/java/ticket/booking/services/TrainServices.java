@@ -28,7 +28,7 @@ public class TrainServices {
          int destinationIndex=stationOrder.indexOf(destination.toLowerCase());
          return sourceIndex != -1 && destinationIndex !=-1 && sourceIndex<destinationIndex;
      }
-
+    //adding new Train
      public void addTrain(Train newTrain){
          Optional<Train> existingTrain=trainList.stream().filter(train->train.getTrainId()
                  .equalsIgnoreCase(newTrain.getTrainId())).findFirst();
